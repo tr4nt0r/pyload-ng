@@ -21,7 +21,7 @@ schema:
   storagedir: str
   tempdir: str?
   reset_password: bool?
-# image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
+image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
 panel_icon: "mdi:language-python"
 ports:
   8000/tcp: 8000
