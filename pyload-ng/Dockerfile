@@ -18,7 +18,7 @@ RUN set -o pipefail && \
     install -v -m755 unrar /usr/bin && \
     cd / && rm "/tmp/unrarsrc.tar.gz" && rm -rf /tmp/unrar && \
     apk del .build-dependencies && \
-    && if [ "${BUILD_ARCH}" = "i386" ]; then \
+    && if [ "${BUILD_ARCH}" = "i386" ] || [ "${BUILD_ARCH}" = "armhf" ]; then \
     apk add --no-cache p7zip sqlite ffmpeg \
     else \
     apk add --no-cache p7zip sqlite tesseract-ocr ffmpeg \
