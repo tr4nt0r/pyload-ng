@@ -29,3 +29,5 @@ profile pyload-ng flags=(attach_disconnected,mediate_deleted) {
   /media/** rw,
   /config/** rw,
   /ssl/** r,
+
+}

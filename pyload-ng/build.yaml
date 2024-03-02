@@ -8,7 +8,7 @@ build_from:
 labels:
   org.opencontainers.image.title: "Home Assistant Add-on: pyLoad-ng"
   org.opencontainers.image.description: "The free and open-source Download Manager written in pure Python."
-  org.opencontainers.image.source: "https://github.com/tr4nt0r/ha-pyload-ng"
+  org.opencontainers.image.source: "https://github.com/tr4nt0r/pyload-ng"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
   TEMPIO_VERSION: "2021.09.0"
