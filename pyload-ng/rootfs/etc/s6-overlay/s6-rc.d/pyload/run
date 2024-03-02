@@ -1,0 +1,29 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
+declare -a options
+
+if bashio::config.has_value "storagedir"; then
+    options+=( --storagedir=$(bashio::config 'storagedir'))
+fi
+
+if bashio::config.has_value "tempdir"; then
+    options+=(--tempdir $(bashio::config 'tempdir'))
+fi
+
+if bashio::config.true 'reset_password'; then
+    options+=(-r)
+    bashio::log.green \
+    '-----------------------------------------------------------'
+
+    bashio::log.red "Username and password will be reset. It's highly recommended to change the default access credentials. After changing your password, revert the reset_password option again to false."
+    bashio::log.blue "Default username: pyload"
+    bashio::log.blue "Default password: pyload"
+
+    bashio::log.green \
+    '-----------------------------------------------------------'
+fi
+
+bashio::log.info 'Starting pyLoad...'
+bashio::log.green \
+'-----------------------------------------------------------'
+exec pyload --userdir=/config ${options[@]}

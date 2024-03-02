@@ -14,6 +14,20 @@
         "panel": "new"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Rebuild and Start Addon",
+      "type": "shell",
+      "command": "docker exec -it hassio_cli sh -c \"ha addons rebuild local_pyload-ng && ha addons start local_pyload-ng\" && sudo docker logs --follow addon_local_pyload-ng",
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
     }
   ]
 }

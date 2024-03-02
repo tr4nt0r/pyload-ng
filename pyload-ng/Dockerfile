@@ -2,11 +2,28 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+ENV PYTHONUNBUFFERED=1
+ENV PYCURL_SSL_LIBRARY=openssl
 # Execute during the build of the image
-ARG TEMPIO_VERSION BUILD_ARCH
-RUN \
-    curl -sSLf -o /usr/bin/tempio \
-    "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
+ARG UNRAR_VERSION BUILD_ARCH
+
+RUN set -o pipefail && \
+    apk add --no-cache --virtual .build-dependencies build-base curl-dev && \
+    pip --no-cache-dir install pycurl && \
+    curl -sSLf -o /tmp/unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
+    tar -C /tmp -zxf "/tmp/unrarsrc.tar.gz" && \
+    cd /tmp/unrar && make -f makefile && \
+    install -v -m755 unrar /usr/bin && \
+    cd / && rm "/tmp/unrarsrc.tar.gz" && rm -rf /tmp/unrar && \
+    apk del .build-dependencies && \
+    && if [ "${BUILD_ARCH}" = "i386" ]; then \
+    apk add --no-cache p7zip sqlite ffmpeg \
+    else \
+    apk add --no-cache p7zip sqlite tesseract-ocr ffmpeg \
+    fi && \
+    pip --no-cache-dir install --pre pyload-ng[all]==0.5.0b3.dev81
 
 # Copy root filesystem
 COPY rootfs /

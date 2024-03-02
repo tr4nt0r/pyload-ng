@@ -1,14 +1,15 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  aarch64: "ghcr.io/home-assistant/aarch64-base:3.15"
-  amd64: "ghcr.io/home-assistant/amd64-base:3.15"
-  armhf: "ghcr.io/home-assistant/armhf-base:3.15"
-  armv7: "ghcr.io/home-assistant/armv7-base:3.15"
-  i386: "ghcr.io/home-assistant/i386-base:3.15"
+  aarch64: ghcr.io/home-assistant/aarch64-base-python:3.11-alpine3.19
+  armhf: ghcr.io/home-assistant/armhf-base-python:3.11-alpine3.19
+  armv7: ghcr.io/home-assistant/armv7-base-python:3.11-alpine3.19
+  amd64: ghcr.io/home-assistant/amd64-base-python:3.11-alpine3.19
+  i386: ghcr.io/home-assistant/i386-base-python:3.11-alpine3.19
 labels:
-  org.opencontainers.image.title: "Home Assistant Add-on: Example add-on"
-  org.opencontainers.image.description: "Example add-on to use as a blueprint for new add-ons."
-  org.opencontainers.image.source: "https://github.com/home-assistant/addons-example"
+  org.opencontainers.image.title: "Home Assistant Add-on: pyLoad-ng"
+  org.opencontainers.image.description: "The free and open-source Download Manager written in pure Python."
+  org.opencontainers.image.source: "https://github.com/tr4nt0r/ha-pyload-ng"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
   TEMPIO_VERSION: "2021.09.0"
+  UNRAR_VERSION: "7.0.7"
