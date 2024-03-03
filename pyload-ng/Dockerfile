@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV PYTHONUNBUFFERED=1
 ENV PYCURL_SSL_LIBRARY=openssl
 # Execute during the build of the image
-ARG UNRAR_VERSION BUILD_ARCH
+ARG UNRAR_VERSION PYLOADNG_VERSION BUILD_ARCH
 
 RUN set -o pipefail && \
     apk add --no-cache --virtual .build-dependencies build-base curl-dev && \
@@ -22,7 +22,7 @@ RUN set -o pipefail && \
     apk add --no-cache tesseract-ocr; \
     fi && \
     apk add --no-cache p7zip sqlite ffmpeg && \
-    pip --no-cache-dir install --pre pyload-ng[all]==0.5.0b3.dev81
+    pip --no-cache-dir install --pre pyload-ng[all]==${PYLOADNG_VERSION}
 
 # Copy root filesystem
 COPY rootfs /

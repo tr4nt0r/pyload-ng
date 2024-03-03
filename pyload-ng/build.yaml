@@ -11,5 +11,5 @@ labels:
   org.opencontainers.image.source: "https://github.com/tr4nt0r/pyload-ng"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
-  TEMPIO_VERSION: "2021.09.0"
   UNRAR_VERSION: "7.0.7"
+  PYLOADNG_VERSION: "0.5.0b3.dev81"
