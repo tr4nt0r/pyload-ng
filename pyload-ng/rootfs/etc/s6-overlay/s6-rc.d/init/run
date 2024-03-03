@@ -1,2 +1,8 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
+
+if ! bashio::fs.file_exists "/config/settings/pyload.cfg"; then
+    bashio::log.info 'Copy initial pyload.cfg'
+    mkdir /config/settings
+    cp /etc/pyload/templates/pyload.cfg /config/settings/
+fi
