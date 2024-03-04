@@ -22,7 +22,7 @@ RUN set -o pipefail && \
     apk add --no-cache tesseract-ocr; \
     fi && \
     apk add --no-cache p7zip sqlite ffmpeg && \
-    pip --no-cache-dir install --pre pyload-ng[all]==${PYLOADNG_VERSION}
+    pip --no-cache-dir install pyload-ng[all]==${PYLOADNG_VERSION}
 
 # Copy root filesystem
 COPY rootfs /
