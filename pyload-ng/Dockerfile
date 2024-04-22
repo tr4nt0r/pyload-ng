@@ -1,7 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-FROM ghcr.io/linuxserver/unrar:7.0.7-ls5 as unrar
-COPY --from=unrar /usr/bin/unrar-alpine /usr/bin/unrar
-
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
@@ -12,7 +9,7 @@ ENV PYCURL_SSL_LIBRARY=openssl
 # Execute during the build of the image
 ARG UNRAR_VERSION PYLOADNG_VERSION BUILD_ARCH
 
-
+COPY --from=ghcr.io/linuxserver/unrar:7.0.7-ls5 /usr/bin/unrar-alpine /usr/bin/unrar
 
 # RUN set -o pipefail && \
 #     apk add --no-cache --virtual .build-dependencies build-base curl-dev && \
