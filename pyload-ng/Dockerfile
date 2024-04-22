@@ -10,19 +10,27 @@ ENV PYCURL_SSL_LIBRARY=openssl
 ARG UNRAR_VERSION PYLOADNG_VERSION BUILD_ARCH
 
 RUN set -o pipefail && \
-    apk add --no-cache --virtual .build-dependencies build-base curl-dev && \
-    pip --no-cache-dir install pycurl && \
-    curl -sSLf -o /tmp/unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
+    apk add --no-cache --virtual .build-dependencies build-base curl-dev
+
+RUN pip install --upgrade pip && \
+    pip --no-cache-dir install pycurl
+
+RUN curl -sSLf -o /tmp/unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
     tar -C /tmp -zxf "/tmp/unrarsrc.tar.gz" && \
     cd /tmp/unrar && make -f makefile && \
     install -v -m755 unrar /usr/bin && \
-    cd / && rm "/tmp/unrarsrc.tar.gz" && rm -rf /tmp/unrar && \
-    apk del .build-dependencies && \
-    if [ ! "${BUILD_ARCH}" = "i386" ] &&  [ ! "${BUILD_ARCH}" = "armhf" ]; then \
+    cd / && rm "/tmp/unrarsrc.tar.gz" && rm -rf /tmp/unrar
+
+
+RUN if [ ! "${BUILD_ARCH}" = "i386" ] &&  [ ! "${BUILD_ARCH}" = "armhf" ]; then \
     apk add --no-cache tesseract-ocr; \
-    fi && \
-    apk add --no-cache p7zip sqlite ffmpeg && \
-    pip --no-cache-dir install pyload-ng[all]==${PYLOADNG_VERSION}
+    fi
+
+RUN apk add --no-cache p7zip sqlite ffmpeg
+
+RUN pip --no-cache-dir install pyload-ng==${PYLOADNG_VERSION}
+
+RUN apk del .build-dependencies
 
 # Copy root filesystem
 COPY rootfs /
