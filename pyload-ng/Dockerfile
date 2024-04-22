@@ -9,17 +9,16 @@ ENV PYCURL_SSL_LIBRARY=openssl
 # Execute during the build of the image
 ARG UNRAR_VERSION PYLOADNG_VERSION BUILD_ARCH
 
-COPY --from=ghcr.io/linuxserver/unrar:7.0.7-ls5 /usr/bin/unrar-alpine /usr/bin/unrar
+# COPY --from=ghcr.io/linuxserver/unrar:7.0.7-ls5 /usr/bin/unrar-alpine /usr/bin/unrar
 
-# RUN set -o pipefail && \
-#     apk add --no-cache --virtual .build-dependencies build-base curl-dev && \
-#     pip --no-cache-dir install pycurl && \
-#     curl -sSLf -o /tmp/unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
-#     tar -C /tmp -zxf "/tmp/unrarsrc.tar.gz" && \
-#     cd /tmp/unrar && make -f makefile && \
-#     install -v -m755 unrar /usr/bin && \
-#     cd / && rm "/tmp/unrarsrc.tar.gz" && rm -rf /tmp/unrar && \
-#     apk del .build-dependencies && \
+RUN set -o pipefail && \
+    apk add --no-cache --virtual .build-dependencies build-base curl-dev && \
+    curl -sSLf -o /tmp/unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
+    tar -C /tmp -zxf "/tmp/unrarsrc.tar.gz" && \
+    cd /tmp/unrar && make -f makefile && \
+    install -v -m755 unrar /usr/bin && \
+    rm -rf /tmp/* /root/.cache && \
+    apk del --purge .build-dependencies
 
 RUN if [ ! "${BUILD_ARCH}" = "i386" ] &&  [ ! "${BUILD_ARCH}" = "armhf" ]; then \
     apk add --no-cache tesseract-ocr; \
