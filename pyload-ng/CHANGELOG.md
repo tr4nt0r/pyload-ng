@@ -1,8 +1,7 @@
 
-## 1.1.0
+## 1.0.6
 
-* Support for running pyLoad with different UID/GUID #
-* Removed download folder from Settings. Change through pyLoad.
+* Removed download folder from Settings. Change through pyLoad UI.
 
 ## 1.0.1
 

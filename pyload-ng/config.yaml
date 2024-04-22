@@ -17,11 +17,7 @@ map:
   - ssl:ro
 options:
   tempdir: ""
-  PGID: 1000
-  PUID: 1000
 schema:
-  PGID: int
-  PUID: int
   tempdir: str?
   reset_password: bool?
   ssl: bool?

@@ -11,9 +11,3 @@ configuration:
   ssl:
     name: SSL enabled
     description: "Set to true if SSL was enabled in pyLoad Settings (only changes link in Home Assistant)"
-  PGID:
-    name: PGID
-    description: Group ID of running process
-  PUID:
-    name: PUID
-    description: User ID of running process
