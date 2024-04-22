@@ -22,4 +22,4 @@ fi
 bashio::log.info 'Starting pyLoad...'
 bashio::log.green \
 '-----------------------------------------------------------'
-exec s6-setuidgid $(bashio::config PUID):$(bashio::config PGID) pyload --userdir=/config ${options[@]}
+exec s6-setuidgid $(bashio::config PUID) pyload --userdir=/config ${options[@]}
