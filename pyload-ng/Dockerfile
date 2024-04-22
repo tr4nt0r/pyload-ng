@@ -12,8 +12,8 @@ ARG UNRAR_VERSION PYLOADNG_VERSION BUILD_ARCH
 RUN set -o pipefail && \
     apk add --no-cache --virtual .build-dependencies build-base curl-dev
 
-RUN pip install --upgrade pip && \
-    pip --no-cache-dir install pycurl
+# RUN pip install --upgrade pip && \
+#     pip --no-cache-dir install pycurl
 
 RUN curl -sSLf -o /tmp/unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
     tar -C /tmp -zxf "/tmp/unrarsrc.tar.gz" && \
