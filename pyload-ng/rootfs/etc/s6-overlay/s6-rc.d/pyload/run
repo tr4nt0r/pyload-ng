@@ -2,10 +2,6 @@
 # shellcheck shell=bash
 declare -a options
 
-if bashio::config.has_value "storagedir"; then
-    options+=( --storagedir=$(bashio::config 'storagedir'))
-fi
-
 if bashio::config.has_value "tempdir"; then
     options+=(--tempdir $(bashio::config 'tempdir'))
 fi
@@ -26,4 +22,4 @@ fi
 bashio::log.info 'Starting pyLoad...'
 bashio::log.green \
 '-----------------------------------------------------------'
-exec pyload --userdir=/config ${options[@]}
+exec s6-setuidgid $(bashio::config PUID):$(bashio::config PGID) pyload --userdir=/config ${options[@]}
