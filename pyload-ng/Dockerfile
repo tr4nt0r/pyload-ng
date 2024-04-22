@@ -18,6 +18,7 @@ RUN set -o pipefail && \
     cd /tmp/unrar && make -f makefile && \
     install -v -m755 unrar /usr/bin && \
     rm -rf /tmp/* /root/.cache && \
+    pip --no-cache-dir install pycurl && \
     apk del --purge .build-dependencies
 
 RUN if [ ! "${BUILD_ARCH}" = "i386" ] &&  [ ! "${BUILD_ARCH}" = "armhf" ]; then \
