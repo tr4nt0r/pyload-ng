@@ -5,3 +5,11 @@ updates:
     schedule:
       interval: weekly
       time: "06:00"
+  - package-ecosystem: "docker"
+    directory: "/pyload-ng"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "pip"
+    directory: "/pyload-ng"
+    schedule:
+      interval: "weekly"
