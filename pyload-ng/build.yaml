@@ -1,15 +1,12 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  aarch64: ghcr.io/home-assistant/aarch64-base-python:3.12-alpine3.21
-  armhf: ghcr.io/home-assistant/armhf-base-python:3.12-alpine3.21
-  armv7: ghcr.io/home-assistant/armv7-base-python:3.12-alpine3.21
-  amd64: ghcr.io/home-assistant/amd64-base-python:3.12-alpine3.21
-  i386: ghcr.io/home-assistant/i386-base-python:3.12-alpine3.21
+  aarch64: ghcr.io/hassio-addons/base-python:16.1.4
+  armhf: ghcr.io/hassio-addons/base-python:16.1.4
+  armv7: ghcr.io/hassio-addons/base-python:16.1.4
+  amd64: ghcr.io/hassio-addons/base-python:16.1.4
+  i386: ghcr.io/hassio-addons/base-python:16.1.4
 labels:
   org.opencontainers.image.title: "Home Assistant Add-on: pyLoad-ng"
   org.opencontainers.image.description: "The free and open-source Download Manager written in pure Python."
   org.opencontainers.image.source: "https://github.com/tr4nt0r/pyload-ng"
   org.opencontainers.image.licenses: "Apache License 2.0"
-args:
-  UNRAR_VERSION: "7.1.4"
-  PYLOADNG_VERSION: "0.5.0b3.dev87"

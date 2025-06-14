@@ -1,0 +1,2 @@
+legacy-cgi==2.6.3
+pyload-ng==0.5.0b3.dev88

@@ -1,5 +1,5 @@
 name: pyLoad-ng
-version: "1.1.0"
+version: "1.2.0"
 slug: pyload-ng
 description: "The free and open-source Download Manager written in pure Python"
 url: "https://github.com/tr4nt0r/pyload-ng"
@@ -21,7 +21,7 @@ schema:
   tempdir: str?
   reset_password: bool?
   ssl: bool?
-image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
+# image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
 panel_icon: "mdi:language-python"
 ports:
   8000/tcp: 8000
@@ -30,3 +30,5 @@ ports_description:
   8000/tcp: pyLoad Web Interface
   9666/tcp: "Click 'N' Load [default: 9666] (not supported with SSL enabled)"
 webui: "[PROTO:ssl]://[HOST]:[PORT:8000]/"
+discovery:
+  - pyload

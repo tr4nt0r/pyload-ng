@@ -1,3 +1,10 @@
+## 1.2.0
+
+- Update pyLoad-ng to v0.5.0b3.dev88
+- Update UnRAR to v.7.1.7
+- Switch base image to addon-base-python v16.1.4 from Community Add-ons repository
+- Addon uses now Python v3.13
+- Add support for addon discovery
 
 ## 1.1.0
 
