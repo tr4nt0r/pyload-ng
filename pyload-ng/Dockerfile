@@ -17,6 +17,7 @@ ARG BUILD_ARCH="amd64"
 
 RUN \
     apk add --no-cache --virtual .build-dependencies \
+        libffi-dev \
         build-base \
         curl-dev \
     \
@@ -37,7 +38,7 @@ RUN \
         sqlite \
         ffmpeg \
     \
-    && pip --no-cache-dir install -r /tmp/requirements.txt \
+    && pip --no-cache-dir install -r /tmp/requirements.txt --no-binary cffi \
     \
     && rm -rf /tmp/* /root/.cache \
     && apk del --purge .build-dependencies

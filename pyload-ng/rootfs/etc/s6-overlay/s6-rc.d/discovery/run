@@ -10,9 +10,9 @@ declare config
 bashio::net.wait_for 8000 127.0.0.1 300
 
 config=$(bashio::var.json \
-    url "http://localhost:$(bashio::addon.port 8000)"
-    username "pyload"
-    password "pyload"
+    url "http://localhost:$(bashio::addon.port 8000)" \
+    username "pyload" \
+    password "pyload" \
 )
 
 if bashio::discovery "pyload" "${config}" > /dev/null; then
