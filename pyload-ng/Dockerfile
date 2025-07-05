@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:16.1.4
+ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:17.0.0
 FROM ${BUILD_FROM}
 
 # Set workdir
