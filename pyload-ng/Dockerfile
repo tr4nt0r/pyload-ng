@@ -11,7 +11,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 ENV PYTHONUNBUFFERED=1
 ENV PYCURL_SSL_LIBRARY=openssl
-ARG UNRAR_VERSION="7.1.7"
+ARG UNRAR_VERSION="7.1.8"
 ARG BUILD_ARCH="amd64"
 # Execute during the build of the image
 
