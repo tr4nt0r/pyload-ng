@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
-  "labels": ["dependencies", "no-stale"],
+  "labels": ["dependencies"],
   "commitMessagePrefix": "⬆️",
   "commitMessageTopic": "{{depName}}",
   "customManagers": [
@@ -40,7 +40,7 @@
   "packageRules": [
     {
       "matchDatasources": ["repology"],
-      "automerge": false
+      "automerge": true
     },
     {
       "groupName": "Add-on base image",
@@ -50,13 +50,7 @@
       "groupName": "Add-on base image",
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["minor", "patch"],
-      "automerge": false
-    },
-    {
-      "matchDatasources": ["github-releases"],
-      "matchDepNames": ["louislam/uptime-kuma"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": false
+      "automerge": true
     },
     {
       "matchManagers": ["pip_requirements"],
@@ -70,7 +64,7 @@
     {
       "matchManagers": ["pip_requirements"],
       "matchUpdateTypes": ["minor", "patch"],
-      "automerge": false
+      "automerge": true
     }
   ]
 }
