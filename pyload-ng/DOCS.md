@@ -2,7 +2,7 @@
 
 ## Web Interface
 
-Open your web browser and visit the url [http://homeassistant:8000](http://homeassistant:8000) to have access to  pyLoad's web interface.
+Open your web browser and visit the url [http://homeassistant:8000](http://homeassistant:8000) to have access to pyLoad's web interface.
 
 > Default username: pyload.
 >

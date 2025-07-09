@@ -10,9 +10,6 @@
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-
-
-
 <!--
 
 Notes to developers after forking or using the github template feature:
