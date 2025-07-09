@@ -1,4 +1,5 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:17.0.0
+# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Set workdir
@@ -15,6 +16,7 @@ ARG UNRAR_VERSION="7.1.8"
 ARG BUILD_ARCH="amd64"
 # Execute during the build of the image
 
+# hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         libffi-dev \
@@ -27,16 +29,12 @@ RUN \
     && curl -sSLf -o unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
     tar -zxf "/tmp/unrarsrc.tar.gz" && \
     cd unrar && make -f makefile && \
-    install -v -m755 unrar /usr/bin && \
-    \
-    if [ ! "${BUILD_ARCH}" = "i386" ] &&  [ ! "${BUILD_ARCH}" = "armhf" ]; then \
-        apk add --no-cache tesseract-ocr; \
-    fi \
-    \
+    install -v -m755 unrar /usr/bin \
     && apk add --no-cache \
         p7zip \
         sqlite \
         ffmpeg \
+        tesseract-ocr \
     \
     && pip --no-cache-dir install -r /tmp/requirements.txt --no-binary cffi \
     \
