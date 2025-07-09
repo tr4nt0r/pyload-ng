@@ -19,22 +19,22 @@ ARG BUILD_ARCH="amd64"
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        libffi-dev \
-        build-base \
-        curl-dev \
+        libffi-dev=3.4.8-r0 \
+        build-base=0.5-r3 \
+        curl-dev=8.14.1-r1 \
     \
     && pip --no-cache-dir install \
-        pycurl \
+        pycurl==7.45.6 \
     \
     && curl -sSLf -o unrarsrc.tar.gz "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" && \
     tar -zxf "/tmp/unrarsrc.tar.gz" && \
     cd unrar && make -f makefile && \
-    install -v -m755 unrar /usr/bin \
-    && apk add --no-cache \
-        p7zip \
-        sqlite \
-        ffmpeg \
-        tesseract-ocr \
+    install -v -m755 unrar /usr/bin && \
+    apk add --no-cache \
+        7zip=24.09-r0 \
+        sqlite=3.49.2-r0 \
+        ffmpeg=6.1.2-r2 \
+        tesseract-ocr=5.5.0-r2 \
     \
     && pip --no-cache-dir install -r /tmp/requirements.txt --no-binary cffi \
     \
