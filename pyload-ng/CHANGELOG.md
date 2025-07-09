@@ -1,3 +1,8 @@
+## 1.3.1
+
+- ⬆️ Update ghcr.io/hassio-addons/base-python Docker tag to v17 @[renovate[bot]](https://github.com/apps/renovate) ([#34](https://github.com/tr4nt0r/pyload-ng/pull/34))
+- ⬆️ Update unrar to v7.1.8 @[renovate[bot]](https://github.com/apps/renovate) ([#35](https://github.com/tr4nt0r/pyload-ng/pull/35))
+
 ## 1.2.0
 
 - Update pyLoad-ng to v0.5.0b3.dev88
