@@ -33,6 +33,7 @@ To use pyLoad's **Click'N'Load** feature from your local machine, you need to fo
 ### 🐧 Linux (or any system with SSH)
 
 #### 📌 Prerequisites
+
 - An SSH server must be running on your local system.
 
 You can set up port forwarding with the following command:
@@ -46,7 +47,8 @@ ssh -L 127.0.0.1:9666:homeassistant.local:9666 -N 127.0.0.1
 On Windows, you can achieve the same result using the built-in `netsh` tool to forward the Click'N'Load port.
 
 #### 📌 Prerequisites:
-- Run commands in an **elevated Command Prompt** (right-click → *Run as Administrator*).
+
+- Run commands in an **elevated Command Prompt** (right-click → _Run as Administrator_).
 
 #### ✅ Create Port Forward Rule:
 
