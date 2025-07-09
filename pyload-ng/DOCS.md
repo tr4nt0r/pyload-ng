@@ -2,14 +2,22 @@
 
 ## Web Interface
 
-Open your web browser and visit the url [http://homeassistant:8000](http://homeassistant:8000) to have access to pyLoad's web interface.
+To access pyLoad's web interface, open your web browser and navigate to:
+[http://homeassistant:8000](http://homeassistant:8000)
 
-> Default username: pyload.
->
-> Default password: pyload.
+**Default Login Credentials:**
+- **Username**: `pyload`
+- **Password**: `pyload`
 
-**It's highly recommended to change the default access credentials on first start.**
+<ha-alert alert-type="info">**Important:** For security reasons, it is strongly recommended to change the default login credentials immediately after your first login.</ha-alert>
 
-## Temp & Download Paths
+**Default Download Location:**
 
-pyLoad should not be run on an SD, use an SSD/HDD for your temp and download folders. The download dir can be set from the pyLoad UI in Settings/General/General->Download folder.
+`/media/downloads`
+
+To change the download folder:
+1. Open the pyLoad web interface.
+2. Go to **⚙️ Settings → Download**.
+3. Set your preferred path under **Download folder**.
+
+<ha-alert alert-type="warning">Avoid downloading directly to an SD card. The high frequency of write operations can quickly degrade it.</ha-alert>
