@@ -1,13 +1,19 @@
+---
 configuration:
   storagedir:
     name: Download folder location
     description: use this location to save downloads
   tempdir:
     name: Temporary folder location
-    description: use this location to store temporary files (defaults to /tmp/pyLoad)
+    description: >
+      use this location to store temporary files (defaults to /tmp/pyLoad)
   reset_password:
     name: Reset default password
-    description: "reset default username/password on next restart. (username pyload, password pyload) Set to false after reset."
+    description: >
+      reset default username/password on next restart.
+      (username pyload, password pyload) Set to false after reset.
   ssl:
     name: SSL enabled
-    description: "Set to true if SSL was enabled in pyLoad Settings (only changes link in Home Assistant)"
+    description: >
+      Set to true if SSL was enabled in pyLoad Settings
+      (only changes link in Home Assistant)
