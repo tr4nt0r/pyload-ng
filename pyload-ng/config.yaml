@@ -26,10 +26,10 @@ schema:
 panel_icon: "mdi:language-python"
 ports:
   8000/tcp: 8000
-  9666/tcp:
+  9666/tcp: 9666
 ports_description:
   8000/tcp: pyLoad Web Interface
-  9666/tcp: "Click 'N' Load [default: 9666] (not supported with SSL enabled)"
+  9666/tcp: "Click 'N' Load"
 webui: "[PROTO:ssl]://[HOST]:[PORT:8000]/"
 discovery:
   - pyload
