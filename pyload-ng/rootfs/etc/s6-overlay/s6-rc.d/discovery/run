@@ -5,18 +5,25 @@
 # Sends discovery information to Home Assistant.
 # ==============================================================================
 declare config
-
-# Wait for AdGuard Home to become available
+declare proto
+# Wait for pyLoad to become available
 bashio::net.wait_for 8000 127.0.0.1 300
 
+if bashio::config.true ssl; then
+    proto="https"
+else
+    proto="http"
+fi
+
+
 config=$(bashio::var.json \
-    url "http://localhost:$(bashio::addon.port 8000)" \
+    url "${proto}://$(bashio::addon.hostname):$(bashio::addon.port 8000)/" \
     username "pyload" \
     password "pyload" \
 )
 
 if bashio::discovery "pyload" "${config}" > /dev/null; then
-    bashio::log.info "Successfully send discovery information to Home Assistant."
+    bashio::log.info "Successfully sent discovery information to Home Assistant."
 else
     bashio::log.error "Discovery message to Home Assistant failed!"
 fi
