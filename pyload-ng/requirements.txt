@@ -1,3 +1,3 @@
 legacy-cgi==2.6.3
-pyload-ng[plugins]==0.5.0b3.dev88
+pyload-ng[plugins]==0.5.0b3.dev89
 cffi==1.17.1
