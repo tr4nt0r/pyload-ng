@@ -1,11 +1,12 @@
-# v2.0.1
+# v2.0.2
 
 ## What’s changed
 
-## 🚀 Enhancements
+## 🧰 Maintenance
 
-- Improve discovery to include hostname and protocol @tr4nt0r ([#45](https://github.com/tr4nt0r/pyload-ng/pull/45))
+- ⬆️ Update Alpine version in depNameTemplate to 3.22 @tr4nt0r ([#49](https://github.com/tr4nt0r/pyload-ng/pull/49))
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Update pyload-ng to v0.5.0b3.dev89 @[renovate[bot]](https://github.com/apps/renovate) ([#46](https://github.com/tr4nt0r/pyload-ng/pull/46))
+- ⬆️ Update unrar to v7.1.9 @[renovate[bot]](https://github.com/apps/renovate) ([#48](https://github.com/tr4nt0r/pyload-ng/pull/48))
+- ⬆️ Update alpine_3_22/sqlite to v3.49.2-r1 @[renovate[bot]](https://github.com/apps/renovate) ([#50](https://github.com/tr4nt0r/pyload-ng/pull/50))
