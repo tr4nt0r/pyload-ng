@@ -17,7 +17,7 @@ fi
 
 
 config=$(bashio::var.json \
-    url "${proto}://$(bashio::addon.hostname):$(bashio::addon.port 8000)/" \
+    url "${proto}://$(bashio::addon.hostname):8000/" \
     username "pyload" \
     password "pyload" \
 )
