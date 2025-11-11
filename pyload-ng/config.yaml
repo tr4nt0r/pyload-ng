@@ -1,6 +1,6 @@
 ---
 name: pyLoad-ng
-version: "2.0.3"
+version: "2.1.0"
 slug: pyload-ng
 description: "The free and open-source Download Manager written in pure Python"
 url: "https://github.com/tr4nt0r/pyload-ng"
@@ -22,7 +22,7 @@ schema:
   tempdir: str?
   reset_password: bool?
   ssl: bool?
-# image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
+image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
 panel_icon: "mdi:language-python"
 ports:
   8000/tcp: 8000
