@@ -18,6 +18,13 @@ ARG BUILD_ARCH="amd64"
 # Execute during the build of the image
 
 RUN \
+    apk update && \
+    apk add --no-cache \
+        libcrypto3=3.5.4-r0 \
+        libssl3=3.5.4-r0 \
+        openssl-dev=3.5.4-r0 \
+        curl=8.14.1-r2 \
+        libcurl=8.14.1-r2 && \
     apk add --no-cache --virtual .build-dependencies \
         libffi-dev=3.4.8-r0 \
         build-base=0.5-r3 \
@@ -30,7 +37,7 @@ RUN \
         tesseract-ocr=5.5.0-r2 \
         libjpeg-turbo=3.1.0-r0 \
     \
-    && pip --no-cache-dir install -r /tmp/requirements.txt --no-binary cffi \
+    && pip --no-cache-dir install -r /tmp/requirements.txt  \
     \
     && rm -rf /tmp/* /root/.cache \
     && apk del --purge .build-dependencies
