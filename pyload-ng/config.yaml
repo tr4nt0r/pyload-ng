@@ -23,6 +23,8 @@ schema:
   reset_password: bool?
   ssl: bool?
 image: "ghcr.io/tr4nt0r/{arch}-pyload-ng"
+ingress: true
+ingress_port: 8000
 panel_icon: "mdi:language-python"
 ports:
   8000/tcp: 8000
