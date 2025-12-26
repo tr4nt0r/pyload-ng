@@ -1,6 +1,6 @@
 ---
 name: pyLoad-ng
-version: "2.1.0"
+version: "2.1.1"
 slug: pyload-ng
 description: "The free and open-source Download Manager written in pure Python"
 url: "https://github.com/tr4nt0r/pyload-ng"
