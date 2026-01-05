@@ -4,6 +4,8 @@
 
 - Update pyload-ng to v0.5.0b3.dev94
 
+<ha-alert alert-type="warning">pyLoad-ng has introduced a new API that is currently incompatible with the Home Assistant pyLoad integration. Please consider this before updating the add-on.</ha-alert>
+
 ## ⬆️ Dependency updates
 
 - ⬆️ Update actions/checkout action to v5.0.1 @[renovate[bot]](https://github.com/apps/renovate) ([#74](https://github.com/tr4nt0r/pyload-ng/pull/74))
