@@ -1,4 +1,4 @@
-# Home Assistant Add-on: pyLoad-ng
+# Home Assistant App: pyLoad-ng
 
 ## Web Interface
 
@@ -26,7 +26,7 @@ To change the download folder:
 
 ## Using Click'N'Load from a Remote PC
 
-To use pyLoad's **Click'N'Load** feature from your local machine, you need to forward the Click'N'Load port (`9666`) from your local system to your Home Assistant host running the pyLoad Add-on. This allows your browser to forward Click'n'Load links to pyLoad as if it were running locally.
+To use pyLoad's **Click'N'Load** feature from your local machine, you need to forward the Click'N'Load port (`9666`) from your local system to your Home Assistant host running the pyLoad App. This allows your browser to forward Click'n'Load links to pyLoad as if it were running locally.
 
 <ha-alert alert-type="info">Replace `homeassistant.local` with the hostname or IP of your Home Assistant device.</ha-alert>
 

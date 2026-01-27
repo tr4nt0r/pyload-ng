@@ -1,4 +1,4 @@
-# Home Assistant Add-on: pyLoad-ng
+# Home Assistant App: pyLoad-ng
 
 _The free and open-source Download Manager written in pure Python._
 
@@ -26,9 +26,9 @@ To change the download folder:
 
 <ha-alert alert-type="warning">Avoid downloading directly to an SD card. The high frequency of write operations can quickly degrade it.</ha-alert>
 
-## Add-on extras
+## App extras
 
-This add-on is packaged with optional dependencies to use with Plugins.
+This app is packaged with optional dependencies to use with Plugins.
 
 - **unrar:** Used for Plugin ExtractArchive
 - **7zip:** Used for Plugin ExtractArchive
