@@ -1,4 +1,4 @@
-# pyLoad-ng Home Assistant add-on
+# pyLoad-ng Home Assistant app
 
 ![pyload-ng](/pyload-ng/icon.png)
 
