@@ -1,15 +1,22 @@
-# v2.1.1
+# v2.1.2
 
 ## What’s changed
 
-- Update pyload-ng to v0.5.0b3.dev94
+- Update to Python 3.14
+- Update to pyLoad-ng 0.5.0b3dev95
 
 <ha-alert alert-type="warning">pyLoad-ng has introduced a new API that is currently incompatible with the Home Assistant pyLoad integration. Please consider this before updating the add-on.</ha-alert>
 
+## 🧰 Maintenance
+
+- Remove scheduled lint workflow runs @tr4nt0r ([#82](https://github.com/tr4nt0r/pyload-ng/pull/82))
+
 ## ⬆️ Dependency updates
 
-- ⬆️ Update actions/checkout action to v5.0.1 @[renovate[bot]](https://github.com/apps/renovate) ([#74](https://github.com/tr4nt0r/pyload-ng/pull/74))
-- ⬆️ Update actions/checkout action to v6 @[renovate[bot]](https://github.com/apps/renovate) ([#76](https://github.com/tr4nt0r/pyload-ng/pull/76))
-- ⬆️ Update home-assistant/builder action to v2025.11.0 @[renovate[bot]](https://github.com/apps/renovate) ([#77](https://github.com/tr4nt0r/pyload-ng/pull/77))
-- ⬆️ Update actions/checkout action to v6.0.1 @[renovate[bot]](https://github.com/apps/renovate) ([#78](https://github.com/tr4nt0r/pyload-ng/pull/78))
-- Bump pyload-ng[plugins] from 0.5.0b3.dev93 to 0.5.0b3.dev94 in /pyload-ng @[dependabot[bot]](https://github.com/apps/dependabot) ([#80](https://github.com/tr4nt0r/pyload-ng/pull/80))
+- ⬆️ Update actions/checkout action to v6.0.2 @[renovate[bot]](https://github.com/apps/renovate) ([#84](https://github.com/tr4nt0r/pyload-ng/pull/84))
+- ⬆️ Update docker/login-action action to v3.7.0 @[renovate[bot]](https://github.com/apps/renovate) ([#88](https://github.com/tr4nt0r/pyload-ng/pull/88))
+- ⬆️ Update alpine_3_22/libcrypto3 to v3.5.5-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#85](https://github.com/tr4nt0r/pyload-ng/pull/85))
+- Bump pyload-ng[plugins] from 0.5.0b3.dev94 to 0.5.0b3.dev95 in /pyload-ng @[dependabot[bot]](https://github.com/apps/dependabot) ([#89](https://github.com/tr4nt0r/pyload-ng/pull/89))
+- ⬆️ Update alpine_3_22/libssl3 to v3.5.5-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#86](https://github.com/tr4nt0r/pyload-ng/pull/86))
+- ⬆️ Update alpine_3_22/openssl-dev to v3.5.5-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#87](https://github.com/tr4nt0r/pyload-ng/pull/87))
+- ⬆️ Update ghcr.io/hassio-addons/base-python Docker tag to v18 @[renovate[bot]](https://github.com/apps/renovate) ([#75](https://github.com/tr4nt0r/pyload-ng/pull/75))
