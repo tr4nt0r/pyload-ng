@@ -21,7 +21,7 @@ RUN \
     apk update && \
     apk add --no-cache \
         libcrypto3=3.5.5-r0 \
-        libssl3=3.5.4-r0 \
+        libssl3=3.5.5-r0 \
         openssl-dev=3.5.4-r0 \
         curl=8.14.1-r2 \
         libcurl=8.14.1-r2 && \
