@@ -5,6 +5,7 @@
 ## 📋 Summary
 
 This release includes important package updates for core dependencies:
+
 - **pyload-ng**: Updated from 0.5.0b3.dev95 to 0.5.0b3.dev96 (latest development build)
 - **unrar**: Updated to v7.2.4 (latest stable version)
 
