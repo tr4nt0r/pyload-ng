@@ -22,4 +22,5 @@ fi
 bashio::log.info 'Starting pyLoad...'
 bashio::log.green \
 '-----------------------------------------------------------'
+export LD_PRELOAD="/lib/libgcompat.so.0"
 exec pyload --userdir=/config ${options[@]}
