@@ -23,7 +23,7 @@ RUN \
     apk add --no-cache \
         musl=1.2.5-r12 \
         libcrypto3=3.5.7-r0 \
-        libssl3=3.5.6-r0 \
+        libssl3=3.5.7-r0 \
         openssl-dev=3.5.7-r0 \
         curl=8.14.1-r2 \
         libcurl=8.14.1-r2 && \
