@@ -65,6 +65,10 @@
       "matchManagers": ["pip_requirements"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["/curl/"],
+      "groupName": "curl"
     }
   ]
 }
