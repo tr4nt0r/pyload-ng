@@ -30,7 +30,7 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         libffi-dev=3.4.8-r0 \
         build-base=0.5-r3 \
-        curl-dev=8.14.1-r2 \
+        curl-dev=8.14.1-r3 \
 
     \
     && apk add --no-cache \
