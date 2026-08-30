@@ -6,7 +6,7 @@
 - ⬆️ Update openssl to v3.5.8-r0 @[renovate[bot]](https://github.com/apps/renovate) (#143)
 - ⬆️ Update cffi to v2.1.1 @[renovate[bot]](https://github.com/apps/renovate) (#138)
 - ⬆️ Update alpine\_3\_22/libcurl to v8.14.1-r3 @[renovate[bot]](https://github.com/apps/renovate) (#130)
-- ⬆️ Update alpine\_3\_22/curl-dev to v8.14.1-r3  @[renovate[bot]](https://github.com/apps/renovate) (#127)
+- ⬆️ Update alpine\_3\_22/curl-dev to v8.14.1-r3 @[renovate[bot]](https://github.com/apps/renovate) (#127)
 - ⬆️ Update alpine\_3\_22/curl to v8.14.1-r3 - autoclosed @[renovate[bot]](https://github.com/apps/renovate) (#126)
 - ⬆️ Update ghcr.io/linuxserver/unrar Docker tag to v7.2.7 @[renovate[bot]](https://github.com/apps/renovate) (#128)
 - ⬆️ Update cffi to v2.1.0 @[renovate[bot]](https://github.com/apps/renovate) (#129)
@@ -15,7 +15,6 @@
 - ⬆️ Update alpine\_3\_22/openssl-dev to v3.5.7-r0 @[renovate[bot]](https://github.com/apps/renovate) (#123)
 
 ## 🧰 Maintenance
-
 
 - Update package rule for pyload-ng to include pre-releases @tr4nt0r (#144)
 - Group OpenSSL dependency updates in Renovate @tr4nt0r (#142)
