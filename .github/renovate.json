@@ -73,6 +73,11 @@
     {
       "matchPackageNames": ["/libcrypto3/", "/libssl3/", "/openssl-dev/"],
       "groupName": "openssl"
+    },
+    {
+      "matchPackageNames": ["/pyload-ng/"],
+      "ignoreUnstable": false,
+      "respectLatest": false
     }
   ]
 }
