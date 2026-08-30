@@ -22,9 +22,9 @@ RUN \
     apk update && \
     apk add --no-cache \
         musl=1.2.5-r12 \
-        libcrypto3=3.5.7-r0 \
-        libssl3=3.5.7-r0 \
-        openssl-dev=3.5.7-r0 \
+        libcrypto3=3.5.8-r0 \
+        libssl3=3.5.8-r0 \
+        openssl-dev=3.5.8-r0 \
         curl=8.14.1-r3 \
         libcurl=8.14.1-r3 && \
     apk add --no-cache --virtual .build-dependencies \
