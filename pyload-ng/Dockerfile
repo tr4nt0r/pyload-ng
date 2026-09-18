@@ -25,12 +25,12 @@ RUN \
         libcrypto3=3.5.8-r0 \
         libssl3=3.5.8-r0 \
         openssl-dev=3.5.8-r0 \
-        curl=8.14.1-r3 \
-        libcurl=8.14.1-r3 && \
+        curl=8.22.0-r0 \
+        libcurl=8.22.0-r0 && \
     apk add --no-cache --virtual .build-dependencies \
         libffi-dev=3.4.8-r0 \
         build-base=0.5-r4 \
-        curl-dev=8.14.1-r3 \
+        curl-dev=8.22.0-r0 \
 
     \
     && apk add --no-cache \
