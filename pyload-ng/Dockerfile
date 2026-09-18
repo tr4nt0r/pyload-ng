@@ -28,7 +28,7 @@ RUN \
         curl=8.22.0-r0 \
         libcurl=8.22.0-r0 && \
     apk add --no-cache --virtual .build-dependencies \
-        libffi-dev=3.4.8-r0 \
+        libffi-dev=3.5.2-r1 \
         build-base=0.5-r4 \
         curl-dev=8.22.0-r0 \
 
