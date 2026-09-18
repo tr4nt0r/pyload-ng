@@ -48,10 +48,7 @@
     {
       "description": "Packages that live in the Alpine community repository",
       "matchDatasources": ["custom.alpine"],
-      "matchPackageNames": [
-        "alpine_3_24/ffmpeg", 
-        "alpine_3_24/tesseract-ocr"
-      ],
+      "matchPackageNames": ["alpine_3_24/ffmpeg", "alpine_3_24/tesseract-ocr"],
       "registryUrls": [
         "https://dl-cdn.alpinelinux.org/alpine/v3.24/community/x86_64/"
       ]
