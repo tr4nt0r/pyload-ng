@@ -38,7 +38,7 @@ RUN \
         sqlite=3.49.2-r1 \
         ffmpeg=6.1.2-r2 \
         tesseract-ocr=5.5.0-r2 \
-        libjpeg-turbo=3.1.0-r0 \
+        libjpeg-turbo=3.1.3-r0 \
         gcompat=1.1.0-r4 \
     \
     && pip --no-cache-dir install -r /tmp/requirements.txt  \
