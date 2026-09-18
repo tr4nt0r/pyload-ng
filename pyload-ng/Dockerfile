@@ -36,7 +36,7 @@ RUN \
     && apk add --no-cache \
         7zip=26.01-r0 \
         sqlite=3.53.4-r0 \
-        ffmpeg=6.1.2-r2 \
+        ffmpeg=8.1.2-r0 \
         tesseract-ocr=5.5.2-r0 \
         libjpeg-turbo=3.1.3-r0 \
         gcompat=1.1.0-r4 \
