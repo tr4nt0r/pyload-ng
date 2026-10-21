@@ -21,7 +21,7 @@ ARG BUILD_ARCH="amd64"
 RUN \
     apk update && \
     apk add --no-cache \
-        musl=1.2.6-r2 \
+        musl=1.2.6-r3 \
         libcrypto3=3.5.9-r0 \
         libssl3=3.5.9-r0 \
         openssl-dev=3.5.9-r0 \
