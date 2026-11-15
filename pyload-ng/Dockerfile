@@ -1,6 +1,6 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:20.0.1
 
-FROM ghcr.io/linuxserver/unrar:7.2.7 AS unrar
+FROM ghcr.io/linuxserver/unrar:7.3.2 AS unrar
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
