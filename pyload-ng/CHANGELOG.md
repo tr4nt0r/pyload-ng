@@ -1,19 +1,20 @@
-# v2.1.7
+# v2.1.8
 
 ## What's Changed
 
-- ⬆️ Update alpine\_3\_24/ffmpeg to v8 @[renovate[bot]](https://github.com/apps/renovate) (#162)
-- ⬆️ Update alpine\_3\_24/tesseract-ocr to v5.5.2-r0 @[renovate[bot]](https://github.com/apps/renovate) (#161)
-- ⬆️ Update alpine\_3\_24/7zip to v26 @[renovate[bot]](https://github.com/apps/renovate) (#159)
-- ⬆️ Update alpine\_3\_24/sqlite to v3.53.4-r0 @[renovate[bot]](https://github.com/apps/renovate) (#158)
-- ⬆️ Update alpine\_3\_24/libffi-dev to v3.5.2-r1 @[renovate[bot]](https://github.com/apps/renovate) (#157)
-- ⬆️ Update alpine\_3\_24/musl to v1.2.6-r2 @[renovate[bot]](https://github.com/apps/renovate) (#156)
-- ⬆️ Update curl to v8.22.0-r0 @[renovate[bot]](https://github.com/apps/renovate) (#151)
-- ⬆️ Update alpine\_3\_24/libjpeg-turbo to v3.1.3-r0 @[renovate[bot]](https://github.com/apps/renovate) (#155)
-- ⬆️ Update alpine\_3\_24/build-base to v0.5-r4 @[renovate[bot]](https://github.com/apps/renovate) (#154)
-- ⬆️ Update ghcr.io/hassio-addons/base-python Docker tag to v19 @[renovate[bot]](https://github.com/apps/renovate) (#148)
+- ⬆️ Update alpine\_3\_24/libffi-dev to v3.8.1-r0 @[renovate[bot]](https://github.com/apps/renovate) (#176)
+- ⬆️ Update openssl to v3.5.9-r1 @[renovate[bot]](https://github.com/apps/renovate) (#175)
+- ⬆️ Update ghcr.io/linuxserver/unrar Docker tag to v7.3.2 @[renovate[bot]](https://github.com/apps/renovate) (#174)
+- ⬆️ Update ghcr.io/hassio-addons/base-python Docker tag to v20.0.1 @[renovate[bot]](https://github.com/apps/renovate) (#173)
+- ⬆️ Update pyload-ng to v0.5.0b3.dev102 @[renovate[bot]](https://github.com/apps/renovate) (#171)
+- ⬆️ Update curl to v8.23.0-r0 @[renovate[bot]](https://github.com/apps/renovate) (#170)
+- ⬆️ Update alpine\_3\_24/ffmpeg to v8.1.3-r0 @[renovate[bot]](https://github.com/apps/renovate) (#169)
+- ⬆️ Update ghcr.io/hassio-addons/base-python Docker tag to v20 @[renovate[bot]](https://github.com/apps/renovate) (#168)
+- ⬆️ Update alpine\_3\_24/musl to v1.2.6-r3 @[renovate[bot]](https://github.com/apps/renovate) (#166)
+- ⬆️ Update ghcr.io/hassio-addons/base-python Docker tag to v19.1.0 @[renovate[bot]](https://github.com/apps/renovate) (#165)
+- ⬆️ Update openssl to v3.5.9-r0 @[renovate[bot]](https://github.com/apps/renovate) (#164)
 
 ## 🧰 Maintenance
 
-- Add renovate package rule for Alpine community packages @tr4nt0r (#160)
-- Add custom datasource for Alpine in Renovate configuration @tr4nt0r (#153)
+- ⬆️ Update docker/login-action action to v4.8.0 @[renovate[bot]](https://github.com/apps/renovate) (#172)
+- ⬆️ Update docker/login-action action to v4.7.0 @[renovate[bot]](https://github.com/apps/renovate) (#167)
